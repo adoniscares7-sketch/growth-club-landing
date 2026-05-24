@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Growth Club — Atlanta-Metro Operators Only</title>
+<meta name="description" content="$99/month. AI tools, automations, and monthly tool drops for Atlanta real estate wholesalers and home services operators. Cancel anytime.">
+<meta property="og:title" content="AI Growth Club — Atlanta-Metro Operators">
+<meta property="og:description" content="$99/month. Built by operators, for operators. The AI tool stack the gurus don't share.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',system-ui,sans-serif;background:#0a0a0a;color:#f5f5f5;line-height:1.5;overflow-x:hidden}
+.mono{font-family:'JetBrains Mono',monospace}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+.glow{position:fixed;pointer-events:none;border-radius:50%;filter:blur(120px);opacity:.35;z-index:0}
+.glow.a{top:-20%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,#ff6b35,transparent 60%)}
+.glow.b{top:50%;right:-15%;width:700px;height:700px;background:radial-gradient(circle,#ffd700,transparent 60%);opacity:.2}
+.glow.c{top:130%;left:30%;width:500px;height:500px;background:radial-gradient(circle,#00d4ff,transparent 60%);opacity:.18}
+header{position:relative;z-index:10;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+header .container{display:flex;justify-content:space-between;align-items:center}
+.brand{font-weight:900;font-size:18px;letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
+.brand-dot{width:10px;height:10px;background:linear-gradient(135deg,#ff6b35,#ffd700);border-radius:2px}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#ff6b35,#ff3d00);color:#fff;padding:14px 28px;font-weight:700;font-size:15px;border:none;cursor:pointer;text-decoration:none;border-radius:6px;transition:transform .15s ease,box-shadow .15s ease;letter-spacing:-.01em;font-family:inherit}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(255,107,53,.4)}
+.cta-btn.sm{padding:10px 18px;font-size:13px}
+.hero{position:relative;z-index:1;padding:100px 0 80px;text-align:left}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#ffd700;margin-bottom:24px}
+.eyebrow::before{content:"";width:24px;height:1px;background:#ffd700}
+h1{font-size:clamp(38px,7vw,82px);font-weight:900;line-height:1.02;letter-spacing:-.035em;margin-bottom:24px}
+h1 .accent{background:linear-gradient(135deg,#ff6b35 0%,#ffd700 100%);-webkit-background-clip:text;background-clip:text;color:transparent;display:inline-block}
+.sub{font-size:clamp(18px,2.2vw,22px);color:#a0a0a0;max-width:660px;margin-bottom:40px;line-height:1.5}
+.hero-cta-row{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-bottom:32px}
+.hero-meta{display:flex;gap:24px;color:#888;font-size:14px;flex-wrap:wrap}
+.hero-meta .dot{color:#ff6b35;margin-right:6px}
+section{position:relative;z-index:1;padding:80px 0;border-top:1px solid rgba(255,255,255,.04)}
+h2{font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-.025em;margin-bottom:48px;line-height:1.1}
+h2 .accent{color:#ff6b35}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{background:rgba(20,20,20,.6);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.06);padding:32px;border-radius:8px;transition:border-color .2s ease,transform .2s ease}
+.card:hover{border-color:rgba(255,107,53,.3);transform:translateY(-3px)}
+.card-num{font-family:'JetBrains Mono',monospace;font-size:13px;color:#ff6b35;font-weight:700;margin-bottom:16px}
+.card h3{font-size:20px;font-weight:700;margin-bottom:12px;letter-spacing:-.01em}
+.card p{color:#a0a0a0;font-size:15px;line-height:1.6}
+.pricing-card{background:linear-gradient(135deg,rgba(255,107,53,.08) 0%,rgba(255,215,0,.04) 100%);border:1px solid rgba(255,107,53,.3);padding:48px;border-radius:12px;text-align:center;max-width:520px;margin:0 auto;position:relative}
+.pricing-card::before{content:"MONTHLY";position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#ff6b35,#ff3d00);color:#fff;padding:6px 18px;font-size:11px;font-weight:700;letter-spacing:.1em;border-radius:4px}
+.price{font-size:80px;font-weight:900;letter-spacing:-.04em;line-height:1;margin-bottom:8px}
+.price .dollar{font-size:36px;vertical-align:top;color:#a0a0a0;margin-right:4px}
+.price .per{font-size:20px;color:#a0a0a0;font-weight:500;letter-spacing:0}
+.includes{text-align:left;margin:32px 0;padding:24px 0;border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.includes li{padding:10px 0;color:#d0d0d0;font-size:15px;display:flex;align-items:flex-start;gap:12px;list-style:none}
+.includes li::before{content:"→";color:#ff6b35;font-weight:900;flex-shrink:0}
+.guarantee{font-size:14px;color:#888;margin-top:20px;line-height:1.5}
+.faq-item{padding:24px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:18px;font-weight:600;margin-bottom:10px;color:#fff}
+.faq-a{color:#a0a0a0;font-size:15px;line-height:1.6}
+footer{padding:60px 0 40px;border-top:1px solid rgba(255,255,255,.06);color:#666;font-size:13px;text-align:center}
+.note{background:rgba(255,107,53,.08);border-left:3px solid #ff6b35;padding:16px 20px;border-radius:0 6px 6px 0;font-size:14px;color:#d0d0d0;margin:24px 0}
+@media (max-width:640px){
+  .hero{padding:60px 0 40px}
+  section{padding:60px 0}
+  .pricing-card{padding:32px 24px}
+  .price{font-size:64px}
+}
+</style>
+</head>
+<body>
+<div class="glow a"></div>
+<div class="glow b"></div>
+<div class="glow c"></div>
+
+<header>
+  <div class="container">
+    <div class="brand"><span class="brand-dot"></span>HUSTLEHUB · AI GROWTH CLUB</div>
+    <a href="#join" class="cta-btn sm">Join — $99/mo</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">Atlanta-Metro Operators Only · By Invite + Open Tier</div>
+    <h1>The AI tool stack the gurus <span class="accent">don't share.</span></h1>
+    <p class="sub">$99 a month. Real AI tools that ship revenue. Built for Atlanta real estate wholesalers and home services operators who already have a business and just need the cheat codes. No theory. No courses. No gurus. Operators only.</p>
+    <div class="hero-cta-row">
+      <a href="#join" class="cta-btn">Join the Club — $99/mo →</a>
+    </div>
+    <div class="hero-meta">
+      <span><span class="dot">●</span>Cancel anytime</span>
+      <span><span class="dot">●</span>New tool every month</span>
+      <span><span class="dot">●</span>Private operator community</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>What you get <span class="accent">every month.</span></h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-num">01 · WEBSITE</div>
+        <h3>AI-built website snapshot</h3>
+        <p>One deployable site template per month, built for a real vertical. Drop it into your GHL or stand it up on Vercel in 10 minutes. Pre-wired for lead capture + booking + reviews.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">02 · AUTOMATION</div>
+        <h3>Missed-call text-back</h3>
+        <p>The n8n workflow we run for every operator. Import in 60 seconds. Every missed call gets a text within 30 seconds. Catches the leads your competitor's voicemail loses.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">03 · REPUTATION</div>
+        <h3>Google review auto-collect</h3>
+        <p>Fires after every job. SMS + email + smart fallback. Members see 3-8x review velocity in 30 days. The whole pipeline ships as a copy-paste GHL snapshot.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">04 · OUTREACH</div>
+        <h3>Cold-outreach scripts</h3>
+        <p>Tuned for this month's deliverability rules. Tested on real operator lists. Subject lines that hit inbox + DM hooks that get replies. Updated as the rules change.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">05 · AI TOOL DROP</div>
+        <h3>"AI Tool of the Month"</h3>
+        <p>One genuinely new tool every month with the worked-out playbook + ready-to-paste prompts. We test the trash so you don't.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">06 · COMMUNITY</div>
+        <h3>Private operator room</h3>
+        <p>Real operators shipping real businesses. Wins, scripts, screenshots, deal teardowns. No gurus. No lurkers. The room is small on purpose.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Who this is <span class="accent">actually for.</span></h2>
+    <div class="grid">
+      <div class="card">
+        <div class="card-num">YES</div>
+        <h3>Real estate wholesalers</h3>
+        <p>Atlanta-metro. Already running outbound. Want AI to do the lead-scoring, message variants, follow-up, and reply triage so you can stay on dispo and not in your phone all day.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">YES</div>
+        <h3>Home services operators</h3>
+        <p>Roofing, HVAC, solar, lawn, tree, cleaning, remodel. 1-15 employees. You ship jobs but your follow-up game is held together with tape and your Google review count is stuck.</p>
+      </div>
+      <div class="card">
+        <div class="card-num">NO</div>
+        <h3>Course chasers</h3>
+        <p>If you're looking for a $2K mastermind, an AI receptionist setup-fee scam, or "the system that prints money while you sleep" — close the tab. We don't sell that here.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="join">
+  <div class="container">
+    <h2 style="text-align:center;">One price. <span class="accent">No upsell.</span></h2>
+    <div class="pricing-card">
+      <div class="price"><span class="dollar">$</span>99<span class="per">/mo</span></div>
+      <p style="color:#a0a0a0;margin-bottom:8px;">Recurring. Cancel anytime, no questions.</p>
+      <ul class="includes">
+        <li>One deployable website template per month</li>
+        <li>Missed-call text-back automation (n8n)</li>
+        <li>Google review auto-collect (GHL snapshot)</li>
+        <li>Cold-outreach scripts (updated monthly)</li>
+        <li>AI Tool of the Month — full playbook</li>
+        <li>Private operator community access</li>
+        <li>All past drops accessible to active members</li>
+      </ul>
+      <a href="https://hustlehubdigitals.gumroad.com/l/dwalmm" id="primary-cta" class="cta-btn" style="font-size:17px;padding:18px 36px;width:100%;justify-content:center;">Join — $99/mo →</a>
+      <p class="guarantee">First drop hits your inbox within 24 hours of signup. If month 1 isn't worth $99 to your operation, cancel. No charge after the first month.</p>
+    </div>
+    <div class="note" style="max-width:520px;margin:32px auto 0;">
+      Looking for the lighter version? <a href="https://hustlehubdigitals.gumroad.com/l/txwcka" style="color:#ffd700;font-weight:600;">Operator's Inner Circle ($19/mo)</a> — Telegram-only drop room, no website templates. Same operator community.
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="max-width:760px;">
+    <h2>Questions <span class="accent">people ask.</span></h2>
+    <div class="faq-item">
+      <div class="faq-q">Is this a course?</div>
+      <div class="faq-a">No. It's a recurring monthly drop of working tools — copy-paste workflows, GHL snapshots, n8n imports, prompt libraries. You don't watch a 12-hour video. You import a workflow and ship.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do I need GHL?</div>
+      <div class="faq-a">No, but most members have it. Snapshots are GHL-native. If you're on Make/Zapier/n8n, the workflow files import cleanly. We do not require you to buy any specific tool to be a member.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Why Atlanta-metro?</div>
+      <div class="faq-a">Because the scripts, the lead lists, and the review tactics are tuned to this market. You can join from anywhere, but Atlanta operators get the most out of the cold-outreach + GMB stack.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Can I cancel?</div>
+      <div class="faq-a">Yes. In Stripe. One click. Whatever month you've paid for, you keep access to the drops from that month. No clawback.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is the community on Slack or Discord?</div>
+      <div class="faq-a">Private Telegram channel. Single channel, signal-only. New drops posted, member wins posted, scripts shared. No DAU theater.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    HustleHub Digitals · AI Growth Club · Atlanta GA<br>
+    Run by operators. Built for operators. Terms in checkout.
+  </div>
+</footer>
+</body>
+</html>
