@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlanta Lead Gen Co-op — Exclusive Leads, $99/mo</title>
+<meta name="description" content="$99 → 3 exclusive Atlanta-metro home services leads per month. No retainer. No setup fee. Refund if 0 leads delivered.">
+<meta property="og:title" content="Atlanta Lead Gen Co-op — Exclusive Leads $99/mo">
+<meta property="og:description" content="Built by operators. Leads on the day they come in. Refund if we miss month one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:'Inter',system-ui,sans-serif;background:#0a0a0a;color:#f5f5f5;line-height:1.5;overflow-x:hidden}
+.mono{font-family:'JetBrains Mono',monospace}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+.glow{position:fixed;pointer-events:none;border-radius:50%;filter:blur(120px);opacity:.35;z-index:0}
+.glow.a{top:-20%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,#00d4ff,transparent 60%)}
+.glow.b{top:50%;right:-15%;width:700px;height:700px;background:radial-gradient(circle,#ff6b35,transparent 60%);opacity:.18}
+header{position:relative;z-index:10;padding:24px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+header .container{display:flex;justify-content:space-between;align-items:center}
+.brand{font-weight:900;font-size:18px;letter-spacing:-.02em;display:flex;align-items:center;gap:8px}
+.brand-dot{width:10px;height:10px;background:linear-gradient(135deg,#00d4ff,#ff6b35);border-radius:2px}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#00d4ff,#0099cc);color:#0a0a0a;padding:14px 28px;font-weight:800;font-size:15px;border:none;cursor:pointer;text-decoration:none;border-radius:6px;transition:transform .15s,box-shadow .15s;letter-spacing:-.01em;font-family:inherit}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,212,255,.4)}
+.cta-btn.sm{padding:10px 18px;font-size:13px}
+.hero{position:relative;z-index:1;padding:100px 0 80px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#00d4ff;margin-bottom:24px}
+.eyebrow::before{content:"";width:24px;height:1px;background:#00d4ff}
+h1{font-size:clamp(38px,7vw,82px);font-weight:900;line-height:1.02;letter-spacing:-.035em;margin-bottom:24px}
+h1 .accent{background:linear-gradient(135deg,#00d4ff 0%,#ff6b35 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:clamp(18px,2.2vw,22px);color:#a0a0a0;max-width:660px;margin-bottom:40px;line-height:1.5}
+.hero-meta{display:flex;gap:24px;color:#888;font-size:14px;flex-wrap:wrap;margin-top:32px}
+.hero-meta .dot{color:#00d4ff;margin-right:6px}
+section{position:relative;z-index:1;padding:80px 0;border-top:1px solid rgba(255,255,255,.04)}
+h2{font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-.025em;margin-bottom:48px;line-height:1.1}
+h2 .accent{color:#00d4ff}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.tier{background:rgba(20,20,20,.6);border:1px solid rgba(255,255,255,.06);padding:32px;border-radius:8px;transition:border-color .2s,transform .2s}
+.tier:hover{border-color:rgba(0,212,255,.3);transform:translateY(-3px)}
+.tier.featured{border:1px solid rgba(0,212,255,.4);background:linear-gradient(135deg,rgba(0,212,255,.06),rgba(255,107,53,.04))}
+.tier-name{font-family:'JetBrains Mono',monospace;font-size:13px;color:#00d4ff;font-weight:700;margin-bottom:8px}
+.tier-price{font-size:48px;font-weight:900;letter-spacing:-.04em;line-height:1;margin-bottom:8px}
+.tier-price .per{font-size:16px;color:#a0a0a0;font-weight:500;letter-spacing:0}
+.tier h3{font-size:22px;font-weight:700;margin:12px 0;letter-spacing:-.01em}
+.tier ul{list-style:none;margin:20px 0}
+.tier li{padding:8px 0;color:#d0d0d0;font-size:14px;display:flex;align-items:flex-start;gap:10px}
+.tier li::before{content:"→";color:#00d4ff;font-weight:900;flex-shrink:0}
+.tier .cta-btn{margin-top:16px;width:100%;justify-content:center}
+.verticals{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.vertical{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);padding:6px 12px;border-radius:4px;font-size:12px;color:#a0a0a0;font-weight:600}
+.faq-item{padding:24px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-size:18px;font-weight:600;margin-bottom:10px;color:#fff}
+.faq-a{color:#a0a0a0;font-size:15px;line-height:1.6}
+footer{padding:60px 0 40px;border-top:1px solid rgba(255,255,255,.06);color:#666;font-size:13px;text-align:center}
+.guarantee{background:rgba(0,212,255,.08);border-left:3px solid #00d4ff;padding:16px 20px;border-radius:0 6px 6px 0;font-size:14px;color:#d0d0d0}
+input[type=email],input[type=text],select{background:rgba(10,10,10,.6);border:1px solid rgba(255,255,255,.12);color:#fff;padding:14px 16px;border-radius:6px;font-size:15px;font-family:inherit;outline:none;width:100%}
+input:focus,select:focus{border-color:#00d4ff}
+@media (max-width:640px){.hero{padding:60px 0 40px}section{padding:60px 0}.tier{padding:24px}.tier-price{font-size:40px}}
+</style>
+</head>
+<body>
+<div class="glow a"></div>
+<div class="glow b"></div>
+
+<header>
+  <div class="container">
+    <div class="brand"><span class="brand-dot"></span>FLOW247 · ATLANTA LEAD CO-OP</div>
+    <a href="#join" class="cta-btn sm">Join — $99/mo</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">Atlanta-Metro Contractors · Co-op model · Members only</div>
+    <h1>Exclusive Atlanta leads. <span class="accent">$99 a month.</span></h1>
+    <p class="sub">Real homeowners, real intent, real exclusivity. Delivered to your phone within 60 seconds of inquiry. No retainer. No setup fee. No "we'll get back to you in 30 days". If we don't deliver in month one, your money back.</p>
+    <a href="#join" class="cta-btn" style="font-size:17px;padding:18px 36px;">Reserve a Vertical →</a>
+    <div class="hero-meta">
+      <span><span class="dot">●</span>Exclusive (you only)</span>
+      <span><span class="dot">●</span>One contractor per ZIP per vertical</span>
+      <span><span class="dot">●</span>Refund SLA: 0 leads month 1 = $0 charged</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>The verticals <span class="accent">we run.</span></h2>
+    <div class="verticals" style="max-width:760px;">
+      <div class="vertical">Roofing</div><div class="vertical">HVAC</div><div class="vertical">Solar</div>
+      <div class="vertical">Remodel</div><div class="vertical">Lawn Care</div><div class="vertical">Tree Removal</div>
+      <div class="vertical">Pressure Wash</div><div class="vertical">Pest Control</div><div class="vertical">Cleaning</div>
+      <div class="vertical">Foundation</div>
+    </div>
+    <p style="color:#a0a0a0;margin-top:20px;font-size:15px;max-width:760px;line-height:1.6;">One contractor per vertical per ZIP code. When a ZIP fills, the next operator in goes on waitlist. The whole model breaks if we sell the same lead twice — so we don't.</p>
+  </div>
+</section>
+
+<section id="join">
+  <div class="container">
+    <h2 style="text-align:center;">Pick your <span class="accent">volume.</span></h2>
+    <div class="grid" style="max-width:980px;margin:0 auto;">
+      <div class="tier">
+        <div class="tier-name">STARTER</div>
+        <div class="tier-price">$99<span class="per">/mo</span></div>
+        <h3>3 exclusive leads/month</h3>
+        <ul>
+          <li>3 verified homeowner leads</li>
+          <li>SMS + email push within 60 sec</li>
+          <li>One vertical, one ZIP zone</li>
+          <li>Refund if 0 delivered month 1</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <form data-tier-form data-tier="leadgen-99" novalidate>
+          <input type="email" name="email" required autocomplete="email" placeholder="your contractor email">
+          <input type="hidden" name="tier" value="leadgen-99">
+          <button type="submit" class="cta-btn">Reserve Starter →</button>
+          <div data-status style="font-size:13px;color:#888;text-align:center;min-height:16px;margin-top:8px;"></div>
+        </form>
+      </div>
+
+      <div class="tier featured">
+        <div class="tier-name">GROWTH · MOST POPULAR</div>
+        <div class="tier-price">$497<span class="per">/mo</span></div>
+        <h3>15 exclusive leads/month</h3>
+        <ul>
+          <li>15 verified homeowner leads</li>
+          <li>AI pre-qualification call before delivery</li>
+          <li>One vertical, 3-ZIP zone</li>
+          <li>Lead delivery dashboard + SLA tracking</li>
+          <li>Refund if &lt;10 delivered month 1</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <form data-tier-form data-tier="leadgen-497" novalidate>
+          <input type="email" name="email" required autocomplete="email" placeholder="your contractor email">
+          <input type="hidden" name="tier" value="leadgen-497">
+          <button type="submit" class="cta-btn">Reserve Growth →</button>
+          <div data-status style="font-size:13px;color:#888;text-align:center;min-height:16px;margin-top:8px;"></div>
+        </form>
+      </div>
+
+      <div class="tier">
+        <div class="tier-name">SCALE</div>
+        <div class="tier-price">$997<span class="per">/mo</span></div>
+        <h3>40 exclusive leads/month</h3>
+        <ul>
+          <li>40 verified homeowner leads</li>
+          <li>Dedicated phone line + AI receptionist</li>
+          <li>One vertical, full metro coverage</li>
+          <li>Monthly performance call</li>
+          <li>Lead-quality guarantee SLA</li>
+          <li>Cancel anytime</li>
+        </ul>
+        <form data-tier-form data-tier="leadgen-997" novalidate>
+          <input type="email" name="email" required autocomplete="email" placeholder="your contractor email">
+          <input type="hidden" name="tier" value="leadgen-997">
+          <button type="submit" class="cta-btn">Reserve Scale →</button>
+          <div data-status style="font-size:13px;color:#888;text-align:center;min-height:16px;margin-top:8px;"></div>
+        </form>
+      </div>
+    </div>
+    <div class="guarantee" style="max-width:760px;margin:32px auto 0;">
+      <strong>SLA, in writing.</strong> Month 1: if you receive zero leads, we refund the full $99/$497/$997. After month 1 you stay in if it's making money, you cancel in one click if it isn't. No retention call. No 90-day contracts. The whole business runs on referrals from happy operators — losing money on month-1 refunds is cheaper than running a leaky funnel.
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="max-width:760px;">
+    <h2>Questions <span class="accent">contractors ask.</span></h2>
+    <div class="faq-item">
+      <div class="faq-q">Are these exclusive or shared with 5 other contractors?</div>
+      <div class="faq-a">Exclusive. One contractor per vertical per ZIP. We track every delivery and never sell the same lead to two operators. The whole model breaks otherwise — referrals dry up, refunds stack up, we go out of business. Exclusivity is the business.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Where do these leads come from?</div>
+      <div class="faq-a">Combination of: Atlanta-metro homeowner forms (we run them), Google reviews + GMB chat capture, paid social funnels for roofing/HVAC, and a referral engine with property managers + realtors. All inbound, all consented, all warm.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What if a lead I get is garbage?</div>
+      <div class="faq-a">Tell us within 48 hours. If we agree (visible criteria: wrong service area, bot/disconnected, already had service done), we credit your next billing cycle. We track lead quality rolling — your dashboard shows accept/reject so the math is honest.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Why so cheap?</div>
+      <div class="faq-a">Atlanta-only co-op model. We don't sell nationally. We don't run a sales team. The platform is built on top of GHL + n8n + AI receptionists. Margin per lead is small, but we make it up on volume + retention. Your competitor's national lead service charges $50-$200 per lead — we deliver 3 for $99 because we're not paying a sales team to chase 50 states.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">When do I get my first lead?</div>
+      <div class="faq-a">Average is 4-12 days from signup, depending on vertical + ZIP. Roofing in spring = fast (2-7 days). Pest control in November = slower (10-14 days). If month 1 is zero, you don't pay month 1 — period.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    The Flow 247 LLC · Atlanta GA · Lead Co-op Terms in checkout<br>
+    <a href="/" style="color:#666;">← Growth Club ($99/mo for operators)</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var ENDPOINT = "https://asa-internuclear-winter.ngrok-free.dev/capture";
+  var forms = document.querySelectorAll('form[data-tier-form]');
+  forms.forEach(function(form){
+    var btn = form.querySelector('button[type=submit]');
+    var origLabel = btn.textContent;
+    var status = form.querySelector('[data-status]');
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      var data = Object.fromEntries(new FormData(form).entries());
+      if(!data.email || data.email.indexOf('@')<0){ status.textContent = "drop a real email"; status.style.color = "#ff6b35"; return; }
+      btn.disabled = true; btn.textContent = "Saving your spot…"; status.textContent = "";
+      try {
+        var r = await fetch(ENDPOINT, {
+          method: 'POST', mode: 'cors',
+          headers: {'Content-Type':'application/json','ngrok-skip-browser-warning':'1'},
+          body: JSON.stringify(data)
+        });
+        var j = await r.json();
+        if(j.ok){
+          status.textContent = "You're on. We'll email you within 24h with your ZIP availability + onboarding link.";
+          status.style.color = "#00d4ff";
+          form.reset();
+          btn.textContent = "✓ Reserved";
+        } else {
+          status.textContent = (j.message||"hit a snag. try once more.");
+          status.style.color = "#ff6b35";
+          btn.disabled = false; btn.textContent = origLabel;
+        }
+      } catch(err){
+        status.textContent = "network hiccup. try once more.";
+        status.style.color = "#ff6b35";
+        btn.disabled = false; btn.textContent = origLabel;
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
