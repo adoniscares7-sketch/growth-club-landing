@@ -172,12 +172,62 @@ footer{padding:60px 0 40px;border-top:1px solid rgba(255,255,255,.06);color:#666
         <li>Private operator community access</li>
         <li>All past drops accessible to active members</li>
       </ul>
-      <a href="https://hustlehubdigitals.gumroad.com/l/dwalmm" id="primary-cta" class="cta-btn" style="font-size:17px;padding:18px 36px;width:100%;justify-content:center;">Join — $99/mo →</a>
-      <p class="guarantee">First drop hits your inbox within 24 hours of signup. If month 1 isn't worth $99 to your operation, cancel. No charge after the first month.</p>
+      <form id="join-form" style="display:flex;flex-direction:column;gap:12px;margin-top:8px;" novalidate>
+        <input type="email" name="email" id="email" required autocomplete="email" placeholder="your operator email" style="background:rgba(10,10,10,.6);border:1px solid rgba(255,255,255,.12);color:#fff;padding:14px 16px;border-radius:6px;font-size:15px;font-family:inherit;outline:none;width:100%;" />
+        <input type="hidden" name="tier" value="growth-club-99" />
+        <button type="submit" id="primary-cta" class="cta-btn" style="font-size:17px;padding:18px 36px;width:100%;justify-content:center;">Get Month 1 — Reserve My Spot →</button>
+        <div id="form-status" role="status" aria-live="polite" style="font-size:14px;color:#a0a0a0;text-align:center;min-height:18px;"></div>
+      </form>
+      <p class="guarantee">Drop your email — first drop hits your inbox within 24 hours, with the live billing link inside. $99/mo, cancel anytime in one click.</p>
     </div>
     <div class="note" style="max-width:520px;margin:32px auto 0;">
-      Looking for the lighter version? <a href="https://hustlehubdigitals.gumroad.com/l/txwcka" style="color:#ffd700;font-weight:600;">Operator's Inner Circle ($19/mo)</a> — Telegram-only drop room, no website templates. Same operator community.
+      Looking for the lighter version? <a href="#operator-circle" style="color:#ffd700;font-weight:600;">Operator's Inner Circle ($19/mo)</a> — Telegram-only drop room, no website templates. Same operator community.
     </div>
+
+    <div id="operator-circle" style="max-width:520px;margin:48px auto 0;background:rgba(20,20,20,.6);border:1px solid rgba(255,255,255,.06);padding:32px;border-radius:8px;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#ffd700;font-weight:700;margin-bottom:10px;">$19/MO · OPERATOR'S INNER CIRCLE</div>
+      <h3 style="font-size:22px;margin-bottom:12px;letter-spacing:-.015em;">The cheaper room. The smaller list.</h3>
+      <p style="color:#a0a0a0;font-size:15px;margin-bottom:20px;line-height:1.6;">Private Telegram drop room. Weekly operator teardowns. Deliverability + reply-rate updates. No website templates — just the cheat codes early.</p>
+      <form id="join-circle-form" style="display:flex;flex-direction:column;gap:12px;" novalidate>
+        <input type="email" name="email" required autocomplete="email" placeholder="email for the inner circle invite" style="background:rgba(10,10,10,.6);border:1px solid rgba(255,255,255,.12);color:#fff;padding:14px 16px;border-radius:6px;font-size:15px;font-family:inherit;outline:none;width:100%;" />
+        <input type="hidden" name="tier" value="operator-circle-19" />
+        <button type="submit" class="cta-btn" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);width:100%;justify-content:center;font-size:15px;">Reserve Inner Circle Spot — $19/mo →</button>
+        <div data-status role="status" aria-live="polite" style="font-size:13px;color:#888;text-align:center;min-height:16px;"></div>
+      </form>
+    </div>
+
+<script>
+(function(){
+  var ENDPOINT = "https://asa-internuclear-winter.ngrok-free.dev/capture";
+  function wire(form, statusSel){
+    var btn = form.querySelector('button[type=submit]');
+    var origLabel = btn.textContent;
+    var status = form.querySelector(statusSel);
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      var data = Object.fromEntries(new FormData(form).entries());
+      if(!data.email || data.email.indexOf('@')<0){ status.textContent = "drop a real email"; status.style.color="#ff6b35"; return; }
+      btn.disabled = true; btn.textContent = "Saving your spot…"; status.textContent = "";
+      try {
+        var r = await fetch(ENDPOINT, {
+          method: 'POST', mode: 'cors',
+          headers: {'Content-Type':'application/json','ngrok-skip-browser-warning':'1'},
+          body: JSON.stringify(data)
+        });
+        var j = await r.json();
+        if(j.ok){ status.textContent = "You're in. Check your email — first drop within 24h."; status.style.color="#ffd700"; form.reset(); btn.textContent = "✓ On the list"; }
+        else { status.textContent = (j.message||"something went sideways. try once more."); status.style.color="#ff6b35"; btn.disabled = false; btn.textContent = origLabel; }
+      } catch(err){
+        status.textContent = "network hiccup. try once more or DM @TheFlow247.";
+        status.style.color="#ff6b35";
+        btn.disabled = false; btn.textContent = origLabel;
+      }
+    });
+  }
+  wire(document.getElementById('join-form'), '#form-status');
+  wire(document.getElementById('join-circle-form'), '[data-status]');
+})();
+</script>
   </div>
 </section>
 
